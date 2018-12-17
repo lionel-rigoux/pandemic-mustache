@@ -25,7 +25,6 @@
   "homepage": "https://github.com/lionel-rigoux/pandemic-mustache#readme",
   "dependencies": {
     "fs-extra": "^7.0.1",
-    "get-stdin": "^6.0.0",
     "js-yaml": "^3.12.0",
     "mustache": "^3.0.1",
     "yaml-front-matter": "^4.0.0"
