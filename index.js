@@ -8,16 +8,25 @@ const yamlFront = require('yaml-front-matter');
 // read from stdin
 var content = fs.readFileSync(0, 'utf8');
 
-// look in the front matter for views to use
-const frontMatter = yamlFront.loadFront(content);
-
-// get vue list and ensure it's an array
-views = [].concat(frontMatter.mustache || []);
+// look for views: arguments > front-matter
+let views;
+if (process.argv.length > 2){
+  console.error(`Using command line arguments:`);
+  views = process.argv.splice(2);
+} else {
+  console.error(`Using front-matter:`);
+  // look in the front matter for views to use
+  const frontMatter = yamlFront.loadFront(content);
+  // get vue list and ensure it's an array
+  views = [].concat(frontMatter.mustache || []);
+}
 
 // apply all views iteratively
 views.forEach((view) => {
   // path to view file
   filePath = path.join((process.env.PANDOC_SOURCE_PATH || process.cwd()), view);
+  // log
+  console.error(` {{}} <- ${filePath}`);
   // check if exists in source folder
   if (!fs.existsSync(filePath)) {
     throw new Error(`Could not find the view for mustache: ${filePath}.`);
