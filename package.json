@@ -1,6 +1,6 @@
 {
   "name": "pandemic-mustache",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Wrapper to use mustache as a pandemic preprocessing hook",
   "main": "index.js",
   "bin": {
