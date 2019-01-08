@@ -8,8 +8,7 @@ In the front matter of document, specify a list of .json or .yaml files that con
 
 ```yaml
 ---
-pandemic:
-  mustache: "results.json"
+mustache: results.json
 ---
 ```
 
@@ -17,19 +16,10 @@ or
 
 ```yaml
 ---
-pandemic:
-  mustache:
-  - "results/res1.json"
-  - "results/res2.yaml"
+mustache:
+- results/res1.json
+- results/res2.yaml
 ---
 ```
 
-In your pandemic recipe, specify this pandemic-mustache in your list of preprocessing hooks:
-
-```json
-{
-  "prehooks": [
-    "pandemic-mustache"
-  ]
-}
-```
+In the case of multiple files, each file is used in turn to fill in the mustache place holders in your document. Therefore, if a value if defined in multiple files, only the first occurrence will be used in the template and no error will be thrown.
