@@ -1,31 +1,3 @@
 # pandemic-mustache
 
-Wrapper to apply mustache templating to your manuscript in pandemic.
-
-## Usage
-
-```sh
-cat my_document > pandemic-mustache [view1.json] [view2.json] [...]
-```
-
-Where the arguments are .json or .yaml files that contain the 'views' (ie. the name/values association to replace in the template).
-
-If no arguments are given, pandemic-mustache will look in the front matter of the document provided on stdin:
-
-```yaml
----
-mustache: results.json
----
-```
-
-or
-
-```yaml
----
-mustache:
-- results/res1.json
-- results/res2.yaml
----
-```
-
-In the case of multiple files, each file is used in turn to fill in the mustache place holders in your document. Therefore, if a value if defined in multiple files, only the first occurrence will be used in the template and no error will be thrown.
+This package has been renamed ["pandemics-mustache"](https://www.npmjs.com/package/pandemics-mustache) and is now hosted in [Gitlab](https://gitlab.com/pandemics/pandemics-mustache).
