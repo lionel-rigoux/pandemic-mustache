@@ -1,16 +1,16 @@
-# pandemic-mustache
+# pandemics-mustache
 
-Wrapper to apply mustache templating to your manuscript in pandemic.
+Wrapper to apply mustache templating to your manuscript in pandemics.
 
 ## Usage
 
 ```sh
-cat my_document > pandemic-mustache [view1.json] [view2.json] [...]
+cat my_document > pandemics-mustache [view1.json] [view2.json] [...]
 ```
 
 Where the arguments are .json or .yaml files that contain the 'views' (ie. the name/values association to replace in the template).
 
-If no arguments are given, pandemic-mustache will look in the front matter of the document provided on stdin:
+If no arguments are given, pandemics-mustache will look in the front matter of the document provided on stdin:
 
 ```yaml
 ---
