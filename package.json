@@ -1,31 +1,31 @@
 {
-  "name": "pandemic-mustache",
-  "version": "0.3.0",
-  "description": "Wrapper to use mustache as a pandemic preprocessing hook",
+  "name": "pandemics-mustache",
+  "version": "0.3.1",
+  "description": "Wrapper to use mustache as a pandemics preprocessing hook",
   "main": "index.js",
   "bin": {
-    "pandemic-mustache": "./index.js"
+    "pandemics-mustache": "./index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lionel-rigoux/pandemic-mustache.git"
+    "url": "git+https://gitlab.com/pandemics/pandemics-mustache.git"
   },
   "keywords": [
-    "pandemic",
+    "pandemics",
     "mustache"
   ],
   "author": "Lionel Rigoux",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/lionel-rigoux/pandemic-mustache/issues"
+    "url": "https://gitlab.com/pandemics/pandemics-mustache/issues"
   },
-  "homepage": "https://github.com/lionel-rigoux/pandemic-mustache#readme",
+  "homepage": "pandemics.gitlab.io",
   "dependencies": {
-    "js-yaml": "^3.12.0",
-    "mustache": "^3.0.1",
+    "js-yaml": "^3.13.1",
+    "mustache": "^3.1.0",
     "yaml-front-matter": "^4.0.0"
   }
 }
